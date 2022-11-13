@@ -1,8 +1,8 @@
 # The script gets all members of a distribution list, including members from outside of the organization saved in AD as email addresses, not only the AD users
 
+# Put the correct distribution list name in the -group parameter. Use pre-Windows 2000 group name
 
-# put the correct distribution list name in the -group parameter. Use pre-Windows 2000 group name
-# USAGE
+# USAGE:
 # Get-AllGroupMembers -group "Industry Engagement Forum-1298172433"
 
 
