@@ -1,6 +1,16 @@
-# put the correct distribution list name in the $group below. Use pre-Windows 2000 group name
+# The script gets all members of a distribution list, including members from outside of the organization saved in AD as email addresses, not only the AD users
 
-$group = "Industry Engagement Forum-1298172433"
+
+# put the correct distribution list name in the -group parameter. Use pre-Windows 2000 group name
+# USAGE
+# Get-AllGroupMembers -group "Industry Engagement Forum-1298172433"
+
+
+Param(
+    [Parameter(Mandatory, HelpMessage="Provide the group using pre-Windows 2000 name")]
+    [string]$group
+)
+
 $members = (Get-ADGroup $group -Properties member).member
 $users = @()
 
